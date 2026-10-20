@@ -1,0 +1,97 @@
+body{
+    margin: 0;
+    background-image: url("images/bg.png");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    background-color: #6ac482;
+    width: 70%;
+    max-width: 500px;
+    aspect-ratio: 1 / 1;
+
+    margin: 9vh;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text{
+    font-size: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+.image{
+    width: 200px;
+    animation: yip 1s ease-in-out;
+}
+
+.buttongroup{
+    display: flex;
+    flex-direction: row;
+}
+
+.button{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', 
+    sans-serif;
+    font-size: 30px;
+    border-radius: 20px;
+    margin: 20px;
+    width: 150px;
+    height: 60px;
+    background-color: #47915a;
+}
+
+
+#fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 9999;
+    display: none;
+}
+
+
+
+@keyframes yip {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    12% {
+        transform: translateY(18px) rotate(0deg);
+    }
+
+    /* Bounce upward */
+    28% {
+        transform: translateY(-28px) rotate(0deg);
+    }
+
+    /* Swing left while falling */
+    43% {
+        transform: translateY(-8px) rotate(-18deg);
+    }
+
+    /* Swing right as it drops */
+    60% {
+        transform: translateY(10px) rotate(14deg);
+    }
+
+    /* Smaller rebounds */
+    76% {
+        transform: translateY(-4px) rotate(-9deg);
+    }
+
+    90% {
+        transform: translateY(2px) rotate(4deg);
+    }
+}
